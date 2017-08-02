@@ -122,11 +122,12 @@ if (!confirm('By clicking OK, u agree to the terms and conditions of my Web site
 //   alert ('that\'s a fine number');
 // }
 
+//Question 6
 var numberGuess = prompt('please choose the best number');
 var guesses = 3;
 //Returns error if input isn't all numbers
 if (RegExp(/[^\d]/).test(numberGuess)){
-  alert('invalid input');
+  alert('invalid input, please only numbers');
 }
 else{
   while (parseInt(numberGuess) !== 69 && guesses >= 0){ //Runs loop while guess is incorrect OR if guesses are greater than 0
@@ -144,11 +145,25 @@ else{
 }
 //Afterwards, returns message based on exit state of previous while loop
 if (parseInt(numberGuess) === 69){
+  correctAnswers++;
   alert('congratulations! you won!');
 }
 else{
   alert('u failed horribly :(');
 }
 
+//Question 7
 
+var answerArray = ['burd','mitten','johnmadden','snakes','slime','drums']; 
 
+guesses = 6;
+var wordGuess = prompt('please enter the best word');
+
+//Returns error if input isn't all letters
+if (RegExp(/[^\w]/).test(numberGuess)){
+  alert('invalid input, please only letters');
+}
+
+//process answer through case sensitivity and exclusive alphabet character verification
+
+//loop terminates if user has guessed successsfully or if user has exceeded 6 tries
