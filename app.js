@@ -122,55 +122,72 @@ if (!confirm('By clicking OK, u agree to the terms and conditions of my Web site
 //   alert ('that\'s a fine number');
 // }
 
-//Question 6
-var guesses = 3;
-var goodNumber = 69;
-var numberGuess = parseInt(prompt('please choose the best number\nGuesses left: ' + (guesses + 1)));
+// //Question 6
+// var guesses = 3;
+// var goodNumber = 69;
+// var numberGuess = parseInt(prompt('please choose the best number\nGuesses left: ' + (guesses + 1)));
 
-while (parseInt(numberGuess) !== goodNumber && guesses > 0){ //Runs loop while guess is incorrect OR if guesses are greater than 0
-  //Returns error if input isn't all numbers
-  if (RegExp(/[^\d]/).test(numberGuess)) {
-    // alert(numberGuess);
-    //This alternative if condition doesn't work and I don't know why
-    // if (numberGuess == NaN) {
-    alert('invalid input, please only numbers');
+// while (parseInt(numberGuess) !== goodNumber && guesses > 0){ //Runs loop while guess is incorrect OR if guesses are greater than 0
+//   //Returns error if input isn't all numbers
+//   if (RegExp(/[^\d]/).test(numberGuess)) {
+//     // alert(numberGuess);
+//     //This alternative if condition doesn't work and I don't know why
+//     // if (numberGuess == NaN) {
+//     alert('invalid input, please only numbers');
+//     guesses--;
+//     numberGuess = parseInt(prompt('please choose the best number\nGuesses left: ' + (guesses + 1)));
+//   }
+//   else if (numberGuess < goodNumber){
+//     alert ('too low'); 
+//     guesses--;
+//     numberGuess = parseInt(prompt('please choose the best number\nGuesses left: ' + (guesses + 1)));
+//   }
+//   else if (numberGuess > goodNumber){
+//     alert ('too high');
+//     guesses--;
+//     numberGuess = parseInt(prompt('please choose the best number\nGuesses left: ' + guesses));
+//   }
+// } //end of while loop
+
+// //Afterwards, returns message based on exit state of previous while loop
+// if (parseInt(numberGuess) === goodNumber){
+//   // correctAnswers++;
+//   alert('congratulations! you won!');
+// }
+// else{
+//   alert('u failed horribly :(');
+// }
+
+//Question 7
+guesses = 6;
+var answerArray = ['burd','mitten','johnmadden','denim','slime','drums']; 
+var correctTracker = 0;
+
+//Returns error if input isn't all letters
+while (correctTracker === 0 && guesses > 0){
+  var wordGuess = prompt('please enter the best word\nGuesses left: ' + guesses).toLowerCase();
+  if (RegExp(/[^\w]/).test(wordGuess)){
     guesses--;
-    numberGuess = parseInt(prompt('please choose the best number\nGuesses left: ' + (guesses + 1)));
+    alert('invalid input, please only letters');
   }
-  else if (numberGuess < goodNumber){
-    alert ('too low'); 
-    guesses--;
-    numberGuess = parseInt(prompt('please choose the best number\nGuesses left: ' + (guesses + 1)));
-  }
-  else if (numberGuess > goodNumber){
-    alert ('too high');
-    guesses--;
-    numberGuess = parseInt(prompt('please choose the best number\nGuesses left: ' + guesses));
+  else {
+    for (i = 0; i < answerArray.length; i++){
+      if (answerArray[i] == wordGuess){
+        correctTracker = 1;
+      }
+    }
+    if (correctTracker === 0){
+      guesses--;
+      alert ('incorrect');
+    }
   }
 } //end of while loop
 
-//Afterwards, returns message based on exit state of previous while loop
-if (parseInt(numberGuess) === goodNumber){
+if (correctTracker === 1){
   // correctAnswers++;
-  alert('congratulations! you won!');
+  alert("That's right!");
 }
-else{
-  alert('u failed horribly :(');
+else if (guesses === 0){
+  alert("Mission Failed");
 }
 
-
-// //Question 7
-
-// var answerArray = ['burd','mitten','johnmadden','snakes','slime','drums']; 
-
-// guesses = 6;
-// var wordGuess = prompt('please enter the best word');
-
-// //Returns error if input isn't all letters
-// if (RegExp(/[^\w]/).test(numberGuess)){
-//   alert('invalid input, please only letters');
-// }
-
-// //process answer through case sensitivity and exclusive alphabet character verification
-
-// //loop terminates if user has guessed successsfully or if user has exceeded 6 tries
