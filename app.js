@@ -22,9 +22,11 @@ else if (q1.startsWith("y")){
 }
 
 else if (q1 === 'no'){
+  console.log("User has entered incorrect input");
   alert ('incorrect answer');
 }
 else {
+  console.log("User has entered incorrect input");
   alert ('invalid input');
 }
 
@@ -33,6 +35,7 @@ var q2 = prompt('where are you from? (Please enter yes or no');
 q2 = q2.toLowerCase();
 
 if (q2 === 'yes'){
+  console.log("User has entered incorrect input");
   alert ('incorrect answer');
 }
 else if (q2 === 'no'){
@@ -41,6 +44,7 @@ else if (q2 === 'no'){
   alert ('correct!');
 }
 else {
+  console.log("User has entered incorrect input");
   alert ('invalid input');
 }
 
@@ -49,6 +53,7 @@ var q3 = prompt('how would you solve the housing crisis? (Please enter yes or no
 q3 = q3.toLowerCase();
 
 if (q3 === 'yes'){
+  console.log("User has entered incorrect input");
   alert ('incorrect answer');
 }
 else if (q3 === 'no'){
@@ -57,6 +62,7 @@ else if (q3 === 'no'){
   alert ('correct!');
 }
 else {
+  console.log("User has entered incorrect input");
   alert ('invalid input');
 }
 
@@ -70,9 +76,11 @@ if (q4 === 'yes'){
   alert ('correct!');
 }
 else if (q4 === 'no'){
+  console.log("User has entered incorrect input");
   alert ('incorrect answer');
 }
 else {
+  console.log("User has entered incorrect input");
   alert ('invalid input');
 }
 
@@ -86,9 +94,11 @@ if (q5 === 'yes'){
   alert ('correct!');
 }
 else if (q5 === 'no'){
+  console.log("User has entered incorrect input");
   alert ('incorrect answer');
 }
 else {
+  console.log("User has entered incorrect input");
   alert ('invalid input');
 }
 
@@ -97,10 +107,12 @@ var bonusQ = prompt('***BONUS QUESTION***\n please type a letter or a number');
 bonusQ = bonusQ.toLowerCase();
 
 if (bonusQ.length != 1){
+  console.log("User has entered incorrect input");
   alert ('only one character required');
 }
 
 else if (!RegExp(/[a-z0-9]/).test(bonusQ)){
+  console.log("User has entered incorrect input");
   alert ('no forbidden characters allowed');
 }
 
