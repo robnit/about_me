@@ -193,6 +193,9 @@ else if (guesses === 0){
   alert('Mission Failed\nObviously, the best words are: ' + answerArray.join(', '));
   console.log('User has entered incorrect input');
 }
+else {
+  alert('error');
+}
 
 //Final Tally
 console.log('User has earned a total of ' + correctAnswers + ' points');
