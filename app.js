@@ -148,8 +148,8 @@ while (parseInt(numberGuess) !== goodNumber && guesses > 0){ //Runs loop while g
 
 //Afterwards, returns message based on exit state of previous while loop
 if (parseInt(numberGuess) === goodNumber){
-  // correctAnswers++;
-  //console.log('Correct answer guessed! User\'s score is ' + correctAnswers);
+  correctAnswers++;
+  console.log('Correct answer guessed! User\'s score is ' + correctAnswers);
   alert('congratulations! you won!');
 }
 else{
@@ -195,9 +195,10 @@ else if (guesses === 0){
 }
 
 //Final Tally
+console.log('User has earned a total of ' + correctAnswers + ' points');
 if (correctAnswers === 8){
   alert('you have earned the maximum number of points!\n7 out of a possible 7 plus the bonus question!\nyou are either a genius or you cheated');
 }
 else {
-  alert('Good job, ' + userName + '!\nYou earned ' + correctAnswers++ + ' out of a possible 7');
+  alert('Good job, ' + userName + '!\nYou earned ' + correctAnswers + ' out of a possible 7');
 }
