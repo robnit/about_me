@@ -2,11 +2,11 @@ var correctAnswers = 0;
 var userName = prompt('Please enter your name');
 
 var myArray = [
-  ['how old are you? (Please enter yes or no)', 'yes', 0],
-  ['where are you from? (Please enter yes or no', 'no', 0],
-  ['how would you solve the housing crisis? (Please enter yes or no)', 'no', 0],
-  ['Do I enjoy rock climbing, burritos, and chiptune music? (Please enter yes or no)', 'yes', 0],
-  ['How are you? (Please enter yes or no)', 'yes', 0]
+['how old are you? (Please enter yes or no)', 'yes'],
+  ['where are you from? (Please enter yes or no', 'no'],
+  ['how would you solve the housing crisis? (Please enter yes or no)', 'no'],
+  ['Do I enjoy rock climbing, burritos, and chiptune music? (Please enter yes or no)', 'yes'],
+  ['How are you? (Please enter yes or no)', 'yes']
 ];
 
 function yesNo (question,correctAnswer){
@@ -61,9 +61,6 @@ var numberGuess = parseInt(prompt('please choose the best number between 1 and 1
 while (parseInt(numberGuess) !== goodNumber && guesses > 0){ //Runs loop while guess is incorrect OR if guesses are greater than 0
   //Returns error if input isn't all numbers
   if (RegExp(/[^\d]/).test(numberGuess)) {
-    // alert(numberGuess);
-    //This alternative if condition doesn't work and I don't know why
-    // if (numberGuess == NaN) {
     alert('invalid input, please only numbers');
     console.log('User has entered incorrect input');
     guesses--;
