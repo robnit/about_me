@@ -1,4 +1,3 @@
-//Only basic yes/no inputs expected (for now)
 var myArray = [
   ['how old are you? (Please enter yes or no)', 'yes', 0],
   ['where are you from? (Please enter yes or no', 'no', 0],
