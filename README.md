@@ -1,3 +1,5 @@
 # about_me
 
-My good CSS page :)
+My good About_Me Page
+
+Includes HTML, CSS & Javascript
