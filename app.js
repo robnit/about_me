@@ -55,7 +55,7 @@ else if ((RegExp(/[0-9]/).test(bonusQ))){
 
 //Question 6
 var guesses = 3;
-var goodNumber = Math.floor(Math.random(0,9) * 10);
+var goodNumber = (Math.floor(Math.random(0,9) * 10)+1);
 var numberGuess = parseInt(prompt('please choose the best number between 1 and 10\nGuesses left: ' + (guesses + 1)));
 
 while (parseInt(numberGuess) !== goodNumber && guesses > 0){ //Runs loop while guess is incorrect OR if guesses are greater than 0
