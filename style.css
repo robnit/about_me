@@ -68,7 +68,8 @@ p {
 }
 
 ol {
-    /* padding: 10px 5px 10px 10px; */
+    font-size:14px;
+    font-weight:900;
 }
 
 .sideList {
@@ -82,9 +83,6 @@ ol {
    
 }
 
-.top10 {
-    background-color: #F3DC9F;
-}
 header {
     position: fixed;
     color: white;
